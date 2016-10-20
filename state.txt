@@ -1,0 +1,29 @@
+ONE concept
+	1,使用场景是复杂的交互状况下,很简单的逻辑,不需要redux
+	2,Store   数据存储 一个应用仅有一个   redux package提供 createStore来返回新Store对象 const store = createStore(ruducer(),'最高级的默认初始值')
+	3,State   是某个时刻数据   Store中是所有的数据  要得到某时候的   store(返回的store对象)  store.getState()
+	4,Action    是view变化发出的通知  一个对象  必须有的属性是 type,表示名字,其他还有payload[携带的信息] error meta
+	5,store.dispatch({actionObj})  是发出action的唯一方法--->出发reducer方法的执行
+		看见了嘛 store是一个牛逼的操作方法,都用store来
+	6,reducer 是接受action和state来改变state的一个函数
+	7,store.subscribe(),这个函数自动监听state,只要变化了就自动执行其中的函数 var unsubscribe = store.subscribe() 返回一个函数,执行取消监听
+	8,store对象有三个对象方法.store.dispatch() store.subscribe() store.getState()
+	9,所以最終得redux的运行步骤的自我理解:
+		(0)开始就加载redux将store制造出来,用reducer将动作和state链接起来
+		(1)用户骚乱页面,引起页面的动作
+		(2)动作触发事件执行store,store到了reducer函数,根据事件分类改变state之后并且返回state
+		(3)state变化了就触发subscribe函数,然后触发视图跟新
+
+MORE get
+	1,yargs,一个东西,我在执行webpack的时候,想要传入参数,来判断在哪个路径里面执行,于是乎,我需要在命令行传入参数比如 我在命令行里面输入:
+		webpack --type=count  [我传入的是type参数] 然后,webpak.config.js里面写 var argument = require('yargs').argv
+		然后得到传入的值就可以直接 argument.type //count  不过事先要 npm install yargs
+	2,react的ProtoType,是比较有用的,用来定组件的类型,定组件的defaultProp的类型的,比如是否必须,什么类型
+	3,我webpack时候时常Error: Cannot find module 'core-js/library/fn/get-iterator',原因是要我删除node_modules然后重新npm install才行,曰是window上的问题
+	4,关于package.json里面的scripts  若是命令是start test直接npm start就有用,对于其他比如fuck,count,如:
+		"scripts": {
+		    "count":"webpack-dev-server --port 9999 --color --content-base ./count"
+		    }
+		    那么要npm run count才有用
+	5,import React {component} from 'react' 同时导入匿名方法和其他变量 
+		全部导入  import * as Modle from 'modle'  Modle.you  Modle.me 
