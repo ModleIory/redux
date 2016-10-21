@@ -5,7 +5,6 @@ import Counter from './components/Counter'
 import counter from './reducers'
 
 const store = createStore(counter)
-
 const container = document.getElementById('root')
 const render = () =>ReactDOM.render(
 		<Counter 

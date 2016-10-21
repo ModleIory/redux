@@ -1,10 +1,11 @@
 {
-  "name": "react-redux",
+  "name": "Redux",
   "version": "1.0.0",
   "description": "for react and redux",
   "main": "index.js",
   "scripts": {
-    "count": "webpack-dev-server --port 9999 --color --content-base ./count --type=count"
+    "count": "webpack-dev-server --port 9999 --color --content-base ./count --type=count",
+    "todo":"webpack-dev-server --port 9999 --color --content-base ./todo --type=todo"
   },
   "keywords": [
     "fight",
@@ -15,6 +16,7 @@
   "dependencies": {
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
     "redux": "^3.6.0"
   },
   "devDependencies": {

@@ -8,7 +8,7 @@ var COUNT = path.resolve(root,'count')
 var TODO = path.resolve(root,'todo')
 
 var type = argument.type
-console.log(JSON.stringify(type))
+
 var IN 
 //根据参数判断在哪个文件夹执行webpack
 if(type=='count'){
