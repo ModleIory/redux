@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "count": "webpack-dev-server --port 9999 --color --content-base ./count --type=count",
-    "todo":"webpack-dev-server --port 9999 --color --content-base ./todo --type=todo"
+    "todo":"webpack-dev-server --port 9999 --color --content-base ./todo --type=todo",
+    "todos":"webpack-dev-server --port 9999 --color --content-base ./todos --type=todos"
   },
   "keywords": [
     "fight",

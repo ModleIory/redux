@@ -6,6 +6,7 @@ var root = __dirname
 
 var COUNT = path.resolve(root,'count')
 var TODO = path.resolve(root,'todo')
+var TODOS = path.resolve(root,'todos')
 
 var type = argument.type
 
@@ -17,6 +18,9 @@ if(type=='count'){
 }else if(type=='todo'){
 	IN = TODO
 	console.log('todo')
+}else if(type=='todos'){
+	IN = TODOS
+	console.log('todos')
 }
 
 module.exports = {

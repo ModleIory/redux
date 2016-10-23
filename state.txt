@@ -28,11 +28,23 @@ MORE get
 		    那么要npm run count才有用
 	5,import React {component} from 'react' 同时导入匿名方法和其他变量 
 		全部导入  import * as Modle from 'modle'  Modle.you  Modle.me 
-	6,定义react的组件竟然也可以用const Link = ()=>{return ()}来定义
+	6,定义react的组件竟然也可以用const Link = (params)=>{return ()}来定义,params竟然就是其defaultProps
 	7,引入组建的时候,如果名字是index.js直接写文件夹不用在写index会自动识别 真水深
 	8,protoTypes是组件的类或者function的属性,React里面的属性是ProtoTypes
 	9,拓展运算符把数组或者字符串打散为逗号相隔的参数
+		//而且rest的...state仅仅能够放在最后一个参数的位置
+			function you(a,b,...state){
+			  console.log(a)//3
+			  console.log(b)//4
+			  console.log(state)//输入各个,没什么意义
+			  console.log(...state)//[4,5,6,7,'ddd']
+			  var p = [...state,'d','e']//[4,5,6,7,'ddd','d','e']
+			  return p
+			}
+			var fuck = you(3,4,4,5,6,7,'ddd')
+			不可用于{...state,'hello':'hellllll'}的情况更不可以  var p = ...state 或者返回 return ...state都会报错
 	10,一小个组件都要写一个文件的啊
+	11,react的{}使用实在凡是要用到js代码的时候都行不像是angular在标签中不需要使用一样
 
 
 
