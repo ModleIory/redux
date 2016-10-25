@@ -7,6 +7,8 @@ var root = __dirname
 var COUNT = path.resolve(root,'count')
 var TODO = path.resolve(root,'todo')
 var TODOS = path.resolve(root,'todos')
+var ROUTER = path.resolve(root,'router')
+var FAIRY = path.resolve(root,'fairy')
 
 var type = argument.type
 
@@ -21,7 +23,14 @@ if(type=='count'){
 }else if(type=='todos'){
 	IN = TODOS
 	console.log('todos')
+}else if(type=='router'){
+	IN = ROUTER
+	console.log('router')
+}else if(type=='fairy'){
+	IN = FAIRY
+	console.log('fairy')
 }
+
 
 module.exports = {
 	entry:{

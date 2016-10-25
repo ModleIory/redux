@@ -14,6 +14,42 @@ ONE concept
 		(2)动作触发事件执行store,store到了reducer函数,根据事件分类改变state之后并且返回state
 		(3)state变化了就触发subscribe函数,然后触发视图跟新
 	10,编辑的步骤是:(1),先搞定视图层,(2)然后事件分发到store进行处理,(3)之后,到reducer处理state	
+时隔几天之后,老子又来了,狗屁的react-redux,再来会会你
+	one:直接看不到state,不准在组件地方操作state,,,container把state转化成了props,
+	two:示例的目录结构的分析:
+		1,component是样式视图摆放处;2,containers是state,dispatch和props合view的融合重新组合出
+		3,reducers就是reduce的摆放处,4,action就是action
+
+REACT-ROUTER==>>{讲真突然发现这确实是个牛逼的东西}
+	1,是一种url和component的影射的关系,让url和不同的组件对应起来
+	2,npm install react-router
+	3,import { Router,Route,hashHistory} from 'react-router'
+	4,昨天头昏的时候看的router,简直学得垃圾的像一坨屎,今天感觉问题都迎刃而解
+	5,路由的嵌套
+		//history是规定的是url的方式
+		<Router history={hashHistory}>
+			<Route path='/father' compnent={father}>
+				<Route path='/son' compnent={son}></Route>
+			</Route>
+		</Router>
+		father容器里面有{this.props.children},这个时候,若是url输入/fahter,那么就会显示father的内容<father></father>
+		若是输入的是/son,那么,就会是限价在father的在加载son的,就是两个部分的内容都有<father><son></son></father>,[固定的header footer 导航栏可以这么搞],两个要点:(1)index的Route的的嵌套,(2),component中father合适部分的{this.props.children}
+	       **这种勇于共同部分的渲染有效果,访问时候都是根路径
+
+	6,path
+		<Router history={hashHistory}>
+			<Route path='father' compnent={father}>
+				<Route path='son' compnent={son}></Route>
+			</Route>
+		</Router>
+		此时访问.../father是fathercomponent 访问/son none  访问father/son是<father><son></son></father>
+		**这个东西很好,可以严格的控制url样子,还有很多的匹配的样式
+		**触发了第一个路由就不会继续往下触发
+		得到/father/home/:name的name参数杜儿方法是:this.props.params.name,在home容器里面得
+	7,IndexRoute
+	8,hook,当离开一个route或者进入一个route的时候,有onEnter={()=>{}} 和onLeave={()=>{}}两个函数来就行进入时候的执行和离开时候的执行
+
+
 
 MORE get
 	1,yargs,一个东西,我在执行webpack的时候,想要传入参数,来判断在哪个路径里面执行,于是乎,我需要在命令行传入参数比如 我在命令行里面输入:
@@ -45,13 +81,23 @@ MORE get
 			不可用于{...state,'hello':'hellllll'}的情况更不可以  var p = ...state 或者返回 return ...state都会报错
 	10,一小个组件都要写一个文件的啊
 	11,react的{}使用实在凡是要用到js代码的时候都行不像是angular在标签中不需要使用一样
+12,马屁我是真的醉了这个狗日的react-redux,妈批的,老子感觉懵逼死了----不急不急,慢慢来,先撂你一段时间
+	12,对象的结构和函数参数的结构还一样let {hello='hello',you="you"} = {hello:'hhhh',you:'you'}  var {modle:me}= {modle:'fairy'}
+		这时候,me='fairy'
+		函数 function haha({hello='you',you='you'})   haha({you:'you',hello:'helo'})
+	13,react和react-dom 
+		react:component,propTypes,children,	createClass  ...  核心的创建组件,和其特性
+		react-dom:render mountedORnot  主要是dom的操作
+	14,const ComponentName = ({这里摆放的就是propsName})=>{
+		//直接不需要state这种写法...
+	}
 
 
 
 
 
 	fairy protection
-	有时候,你需要的并不是那么难,只是没人懂你,或者说,没人用心去了解你,我愿意做那个小丑
+	有时候,你需要的并不是那么难,只是没人懂你,或者说,没人用心去了解你,我愿意去窥测天机
 
 	小公主生病了。国王指望女儿病好，对她说：“你要什么我都可以给你。 
 你要什么呢？”“我要天上的月亮。” 
@@ -105,5 +151,8 @@ MORE get
 我一颗牙掉了，不是又会有一颗新的长出来吗？”“一点不错。” 
 小丑说，“树上的叶子掉了，还会长出新的叶子。 
 我怎么没想到呢！”“月亮也是这样的。你把月亮送给了我，于是天上又长出了新的月亮。” 
-
 小丑笑笑，走到窗口，只觉得月亮对他眨了眨眼，他也对月亮眨了眨眼。 
+
+公主骑驴过河
+
+唱歌给树木的小鸟

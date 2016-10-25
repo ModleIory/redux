@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "count": "webpack-dev-server --port 9999 --color --content-base ./count --type=count",
-    "todo":"webpack-dev-server --port 9999 --color --content-base ./todo --type=todo",
-    "todos":"webpack-dev-server --port 9999 --color --content-base ./todos --type=todos"
+    "todo": "webpack-dev-server --port 9999 --color --content-base ./todo --type=todo",
+    "todos": "webpack-dev-server --port 9999 --color --content-base ./todos --type=todos",
+    "router": "gulp router",
+    "fairy":"webpack-dev-server --port 9999 --color --content-base ./fairy --type=fairy"
   },
   "keywords": [
     "fight",
@@ -18,6 +20,7 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
     "redux": "^3.6.0"
   },
   "devDependencies": {
@@ -26,6 +29,8 @@
     "babel-preset-react": "^6.16.0",
     "babel-runtime": "^6.11.6",
     "css-loader": "^0.25.0",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.5.2",
     "less-loader": "^2.2.3",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2",
