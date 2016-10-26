@@ -9,6 +9,7 @@ var TODO = path.resolve(root,'todo')
 var TODOS = path.resolve(root,'todos')
 var ROUTER = path.resolve(root,'router')
 var FAIRY = path.resolve(root,'fairy')
+var MODLE = path.resolve(root,'modle')
 
 var type = argument.type
 
@@ -29,6 +30,9 @@ if(type=='count'){
 }else if(type=='fairy'){
 	IN = FAIRY
 	console.log('fairy')
+}else if(type=='modle'){
+	IN = MODLE
+	console.log('modle')
 }
 
 

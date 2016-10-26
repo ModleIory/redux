@@ -8,7 +8,8 @@
     "todo": "webpack-dev-server --port 9999 --color --content-base ./todo --type=todo",
     "todos": "webpack-dev-server --port 9999 --color --content-base ./todos --type=todos",
     "router": "gulp router",
-    "fairy":"webpack-dev-server --port 9999 --color --content-base ./fairy --type=fairy"
+    "fairy":"webpack-dev-server --port 9999 --color --content-base ./fairy --type=fairy",
+    "modle":"webpack-dev-server --port 9999 --color --content-base ./modle --type=modle"
   },
   "keywords": [
     "fight",
