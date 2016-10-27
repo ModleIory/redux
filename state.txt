@@ -20,6 +20,9 @@ ONE concept
 		1,component是样式视图摆放处;2,containers是state,dispatch和props合view的融合重新组合出
 		3,reducers就是reduce的摆放处,4,action就是action
 
+	最终,我的react-redux走上了一条最简单的道路,若是在加上react-redux,我真的感到无比疑惑,但是现在,我能够搞定的是react-router和redux简单版本
+	接下来,我将用于投票系统来进行运用我的react的实践
+
 REACT-ROUTER==>>{讲真突然发现这确实是个牛逼的东西}
 	1,是一种url和component的影射的关系,让url和不同的组件对应起来
 	2,npm install react-router

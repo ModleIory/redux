@@ -4,12 +4,13 @@
   "description": "for react and redux",
   "main": "index.js",
   "scripts": {
-    "count": "webpack-dev-server --port 9999 --color --content-base ./count --type=count",
-    "todo": "webpack-dev-server --port 9999 --color --content-base ./todo --type=todo",
-    "todos": "webpack-dev-server --port 9999 --color --content-base ./todos --type=todos",
+    "count": "webpack-dev-server --port 622 --color --content-base ./count --type=count",
+    "todo": "webpack-dev-server --port 622 --color --content-base ./todo --type=todo",
+    "todos": "webpack-dev-server --port 622 --color --content-base ./todos --type=todos",
     "router": "gulp router",
-    "fairy":"webpack-dev-server --port 9999 --color --content-base ./fairy --type=fairy",
-    "modle":"webpack-dev-server --port 9999 --color --content-base ./modle --type=modle"
+    "fairy":"webpack-dev-server --port 622 --color --content-base ./fairy --type=fairy",
+    "modle":"webpack-dev-server --port 622 --color --content-base ./modle --type=modle",
+    "post":"webpack-dev-server --port 622 --color --content-base ./post --type=post"
   },
   "keywords": [
     "fight",
