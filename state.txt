@@ -19,6 +19,7 @@ ONE concept
 	two:示例的目录结构的分析:
 		1,component是样式视图摆放处;2,containers是state,dispatch和props合view的融合重新组合出
 		3,reducers就是reduce的摆放处,4,action就是action
+	11,react之间的组件的传值,父子 props  子父state   peer Emitter  or same parent
 
 	最终,我的react-redux走上了一条最简单的道路,若是在加上react-redux,我真的感到无比疑惑,但是现在,我能够搞定的是react-router和redux简单版本
 	接下来,我将用于投票系统来进行运用我的react的实践
@@ -51,6 +52,7 @@ REACT-ROUTER==>>{讲真突然发现这确实是个牛逼的东西}
 		得到/father/home/:name的name参数杜儿方法是:this.props.params.name,在home容器里面得
 	7,IndexRoute
 	8,hook,当离开一个route或者进入一个route的时候,有onEnter={()=>{}} 和onLeave={()=>{}}两个函数来就行进入时候的执行和离开时候的执行
+	9,用webpack-dev-server开发router的url,怎么在调试?只需要在通常的命令webpack-dev-server --color --port 999 --content-base ./  若是history的值是hashHistory,那么,就都可以 ,访问时候不论dev-server或者变异后的都行  若是browserHistory,那么,webpack-dev-server无法传递参数但是可以访问,而且,编译后的直接都不可访问?
 
 
 
